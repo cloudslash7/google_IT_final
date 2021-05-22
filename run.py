@@ -20,7 +20,7 @@ for f in os.listdir(root):
                 except IndexError:
                     print("{} has more than 3 lines. Please format correctly and try again".format(f))
                 i += 1
-            fruit["image_name"] = f
+            fruit["image_name"] = f.replace(".txt",".jpeg")
             data.append(fruit)
 
 for item in data:
