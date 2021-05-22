@@ -12,7 +12,7 @@
 ~h
 # Command Line History (newest to oldest):
 :q!
-|2,0,1621665059,,"q!"
+|2,0,1621669295,,"q!"
 
 # Search String History (newest to oldest):
 
@@ -24,237 +24,400 @@
 
 # Registers:
 ""1	LINE	0
-	print(data)
-|3,1,1,1,1,0,1621664873,"print(data)"
+	    root = "/home/student-02-b2e927b7fb52/supplier-data/descriptions"
+|3,1,1,1,1,0,1621668660,"    root = \"/home/student-02-b2e927b7fb52/supplier-data/descriptions\""
 "2	LINE	0
-	                print(line)
-|3,0,2,1,1,0,1621664753,"                print(line)"
+	generate_report()
+|3,0,2,1,1,0,1621668651,"generate_report()"
+"3	LINE	0
+	    paragraph = ""
+|3,0,3,1,1,0,1621668643,"    paragraph = \"\""
+"4	LINE	0
+	import datetime
+|3,0,4,1,1,0,1621668628,"import datetime"
+"5	CHAR	0
+	
+	    for f in os.listdir(root):
+	        if f.endswith(".txt"):
+	            with open(os.path.join(root,f), "r") as item:
+	                lines = item.readlines()
+	                name = lines[0]
+	                weight = lines[1]
+	                paragraph += name + "<br/>" + weight + "<br/
+|3,0,5,0,8,0,1621668568,"","    for f in os.listdir(root):","        if f.endswith(\".txt\"):","            with open(os.path.join(root,f), \"r\") as item:","                lines = item.readlines()","                name = lines[0]","                weight = lines[1]","                paragraph += name + \"<br/>\" + weight + \"<br/"
+"6	CHAR	0
+	
+	def generate_report(attachment, title, paragraph):
+	    root = "/home/student-02-b2e927b7fb52/supplier-data/descriptions"
+	    paragraph = ""
+	    report = SimpleDocTemplate("/t
+|3,0,6,0,5,0,1621668492,"","def generate_report(attachment, title, paragraph):","    root = \"/home/student-02-b2e927b7fb52/supplier-data/descriptions\"","    paragraph = \"\"","    report = SimpleDocTemplate(\"/t"
+"7	CHAR	0
+	
+	    for f in os.listdir(root):
+	        if f.endswith(".txt"):
+	            with open(os.path.join(root,f), "r") as item:
+	                lines = item.readlines()
+	                name = lines[0]
+	                weight = lines[1]
+	                paragraph += name + "<br/>" + weight + "<br/>" + "<br/>"
+	
+	
+|3,0,7,0,10,0,1621668455,"","    for f in os.listdir(root):","        if f.endswith(\".txt\"):","            with open(os.path.join(root,f), \"r\") as item:","                lines = item.readlines()","                name = lines[0]","                weight = lines[1]","                paragraph += name + \"<br/>\" + weight + \"<br/>\" + \"<br/>\"","",""
+"8	LINE	0
+	    report_title = Paragraph("Processed Update on " + datetime.datetime.now().strftime("%B %d, %Y"), styles["h1"])
+|3,0,8,1,1,0,1621668332,"    report_title = Paragraph(\"Processed Update on \" + datetime.datetime.now().strftime(\"%B %d, %Y\"), styles[\"h1\"])"
+"9	LINE	0
+	import datetime
+|3,0,9,1,1,0,1621668297,"import datetime"
 
 # File marks:
-'0  23  58  ~/run.py
-|4,48,23,58,1621665675,"~/run.py"
-'1  18  39  ~/run.py
-|4,49,18,39,1621665557,"~/run.py"
-'2  18  39  ~/run.py
-|4,50,18,39,1621665557,"~/run.py"
-'3  18  57  ~/run.py
-|4,51,18,57,1621665538,"~/run.py"
-'4  18  57  ~/run.py
-|4,52,18,57,1621665538,"~/run.py"
-'5  17  39  ~/run.py
-|4,53,17,39,1621665387,"~/run.py"
-'6  17  39  ~/run.py
-|4,54,17,39,1621665387,"~/run.py"
-'7  17  39  ~/run.py
-|4,55,17,39,1621665387,"~/run.py"
-'8  17  39  ~/run.py
-|4,56,17,39,1621665387,"~/run.py"
-'9  28  25  ~/run.py
-|4,57,28,25,1621665332,"~/run.py"
+'0  29  17  ~/emails.py
+|4,48,29,17,1621669468,"~/emails.py"
+'1  23  13  ~/emails.py
+|4,49,23,13,1621669337,"~/emails.py"
+'2  22  13  ~/emails.py
+|4,50,22,13,1621669337,"~/emails.py"
+'3  32  9  ~/emails.py
+|4,51,32,9,1621669325,"~/emails.py"
+'4  32  9  ~/emails.py
+|4,52,32,9,1621669325,"~/emails.py"
+'5  25  9  ~/emails.py
+|4,53,25,9,1621669325,"~/emails.py"
+'6  25  9  ~/emails.py
+|4,54,25,9,1621669325,"~/emails.py"
+'7  17  19  ~/emails.py
+|4,55,17,19,1621669295,"~/emails.py"
+'8  17  19  ~/emails.py
+|4,56,17,19,1621669295,"~/emails.py"
+'9  17  19  ~/emails.py
+|4,57,17,19,1621669295,"~/emails.py"
 
 # Jumplist (newest first):
--'  23  58  ~/run.py
-|4,39,23,58,1621665675,"~/run.py"
--'  18  39  ~/run.py
-|4,39,18,39,1621665651,"~/run.py"
--'  18  39  ~/run.py
-|4,39,18,39,1621665557,"~/run.py"
--'  18  57  ~/run.py
-|4,39,18,57,1621665538,"~/run.py"
--'  17  39  ~/run.py
-|4,39,17,39,1621665387,"~/run.py"
--'  17  39  ~/run.py
-|4,39,17,39,1621665387,"~/run.py"
--'  17  39  ~/run.py
-|4,39,17,39,1621665387,"~/run.py"
--'  28  25  ~/run.py
-|4,39,28,25,1621665340,"~/run.py"
--'  27  25  ~/run.py
-|4,39,27,25,1621665340,"~/run.py"
--'  28  25  ~/run.py
-|4,39,28,25,1621665340,"~/run.py"
--'  27  25  ~/run.py
-|4,39,27,25,1621665340,"~/run.py"
--'  28  25  ~/run.py
-|4,39,28,25,1621665340,"~/run.py"
--'  27  25  ~/run.py
-|4,39,27,25,1621665340,"~/run.py"
--'  26  25  ~/run.py
-|4,39,26,25,1621665332,"~/run.py"
--'  25  25  ~/run.py
-|4,39,25,25,1621665332,"~/run.py"
--'  26  25  ~/run.py
-|4,39,26,25,1621665332,"~/run.py"
--'  25  25  ~/run.py
-|4,39,25,25,1621665332,"~/run.py"
--'  26  25  ~/run.py
-|4,39,26,25,1621665332,"~/run.py"
--'  25  25  ~/run.py
-|4,39,25,25,1621665332,"~/run.py"
--'  24  57  ~/run.py
-|4,39,24,57,1621665324,"~/run.py"
--'  24  57  ~/run.py
-|4,39,24,57,1621665324,"~/run.py"
--'  27  57  ~/run.py
-|4,39,27,57,1621665324,"~/run.py"
--'  25  57  ~/run.py
-|4,39,25,57,1621665324,"~/run.py"
--'  26  57  ~/run.py
-|4,39,26,57,1621665324,"~/run.py"
--'  24  57  ~/run.py
-|4,39,24,57,1621665324,"~/run.py"
--'  24  57  ~/run.py
-|4,39,24,57,1621665299,"~/run.py"
--'  24  56  ~/run.py
-|4,39,24,56,1621665283,"~/run.py"
--'  24  27  ~/run.py
-|4,39,24,27,1621665059,"~/run.py"
--'  25  18  ~/run.py
-|4,39,25,18,1621665014,"~/run.py"
--'  25  18  ~/run.py
-|4,39,25,18,1621665014,"~/run.py"
--'  25  18  ~/run.py
-|4,39,25,18,1621665014,"~/run.py"
--'  25  18  ~/run.py
-|4,39,25,18,1621665004,"~/run.py"
--'  21  34  ~/run.py
-|4,39,21,34,1621664916,"~/run.py"
--'  22  34  ~/run.py
-|4,39,22,34,1621664916,"~/run.py"
--'  20  34  ~/run.py
-|4,39,20,34,1621664916,"~/run.py"
--'  23  34  ~/run.py
-|4,39,23,34,1621664916,"~/run.py"
--'  21  34  ~/run.py
-|4,39,21,34,1621664916,"~/run.py"
--'  22  34  ~/run.py
-|4,39,22,34,1621664916,"~/run.py"
--'  20  34  ~/run.py
-|4,39,20,34,1621664916,"~/run.py"
--'  23  34  ~/run.py
-|4,39,23,34,1621664916,"~/run.py"
--'  21  34  ~/run.py
-|4,39,21,34,1621664916,"~/run.py"
--'  22  34  ~/run.py
-|4,39,22,34,1621664916,"~/run.py"
--'  20  34  ~/run.py
-|4,39,20,34,1621664916,"~/run.py"
--'  20  34  ~/run.py
-|4,39,20,34,1621664916,"~/run.py"
--'  20  34  ~/run.py
-|4,39,20,34,1621664916,"~/run.py"
--'  20  34  ~/run.py
-|4,39,20,34,1621664916,"~/run.py"
--'  20  34  ~/run.py
-|4,39,20,34,1621664916,"~/run.py"
--'  20  34  ~/run.py
-|4,39,20,34,1621664902,"~/run.py"
--'  19  29  ~/run.py
-|4,39,19,29,1621664868,"~/run.py"
--'  16  29  ~/run.py
-|4,39,16,29,1621664868,"~/run.py"
--'  19  29  ~/run.py
-|4,39,19,29,1621664868,"~/run.py"
--'  16  29  ~/run.py
-|4,39,16,29,1621664868,"~/run.py"
--'  19  29  ~/run.py
-|4,39,19,29,1621664868,"~/run.py"
--'  17  29  ~/run.py
-|4,39,17,29,1621664868,"~/run.py"
--'  18  29  ~/run.py
-|4,39,18,29,1621664868,"~/run.py"
--'  16  29  ~/run.py
-|4,39,16,29,1621664868,"~/run.py"
--'  16  29  ~/run.py
-|4,39,16,29,1621664868,"~/run.py"
--'  16  29  ~/run.py
-|4,39,16,29,1621664868,"~/run.py"
--'  16  29  ~/run.py
-|4,39,16,29,1621664868,"~/run.py"
--'  16  29  ~/run.py
-|4,39,16,29,1621664868,"~/run.py"
--'  16  29  ~/run.py
-|4,39,16,29,1621664868,"~/run.py"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
--'  3  336  ~/supplier-data/descriptions/010.txt
-|4,39,3,336,1621664856,"~/supplier-data/descriptions/010.txt"
+-'  29  17  ~/emails.py
+|4,39,29,17,1621669468,"~/emails.py"
+-'  23  13  ~/emails.py
+|4,39,23,13,1621669348,"~/emails.py"
+-'  22  13  ~/emails.py
+|4,39,22,13,1621669337,"~/emails.py"
+-'  32  9  ~/emails.py
+|4,39,32,9,1621669333,"~/emails.py"
+-'  25  9  ~/emails.py
+|4,39,25,9,1621669333,"~/emails.py"
+-'  25  9  ~/emails.py
+|4,39,25,9,1621669325,"~/emails.py"
+-'  17  19  ~/emails.py
+|4,39,17,19,1621669298,"~/emails.py"
+-'  16  19  ~/emails.py
+|4,39,16,19,1621669298,"~/emails.py"
+-'  16  19  ~/emails.py
+|4,39,16,19,1621669298,"~/emails.py"
+-'  16  19  ~/emails.py
+|4,39,16,19,1621669295,"~/emails.py"
+-'  16  19  ~/emails.py
+|4,39,16,19,1621669276,"~/emails.py"
+-'  16  19  ~/emails.py
+|4,39,16,19,1621669256,"~/emails.py"
+-'  7  0  ~/emails.py
+|4,39,7,0,1621669172,"~/emails.py"
+-'  7  0  ~/emails.py
+|4,39,7,0,1621669172,"~/emails.py"
+-'  7  0  ~/emails.py
+|4,39,7,0,1621669172,"~/emails.py"
+-'  7  0  ~/emails.py
+|4,39,7,0,1621669172,"~/emails.py"
+-'  7  0  ~/emails.py
+|4,39,7,0,1621669172,"~/emails.py"
+-'  7  0  ~/emails.py
+|4,39,7,0,1621669172,"~/emails.py"
+-'  1  0  ~/emails.py
+|4,39,1,0,1621668804,"~/emails.py"
+-'  1  0  ~/emails.py
+|4,39,1,0,1621668804,"~/emails.py"
+-'  1  0  ~/emails.py
+|4,39,1,0,1621668804,"~/emails.py"
+-'  1  0  ~/emails.py
+|4,39,1,0,1621668804,"~/emails.py"
+-'  1  0  ~/emails.py
+|4,39,1,0,1621668804,"~/emails.py"
+-'  1  0  ~/emails.py
+|4,39,1,0,1621668804,"~/emails.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  46  ~/reports.py
+|4,39,15,46,1621668765,"~/reports.py"
+-'  15  35  ~/reports.py
+|4,39,15,35,1621668748,"~/reports.py"
+-'  15  35  ~/reports.py
+|4,39,15,35,1621668748,"~/reports.py"
+-'  15  35  ~/reports.py
+|4,39,15,35,1621668748,"~/reports.py"
+-'  15  35  ~/reports.py
+|4,39,15,35,1621668748,"~/reports.py"
+-'  15  35  ~/reports.py
+|4,39,15,35,1621668748,"~/reports.py"
+-'  15  35  ~/reports.py
+|4,39,15,35,1621668748,"~/reports.py"
+-'  15  35  ~/reports.py
+|4,39,15,35,1621668748,"~/reports.py"
+-'  15  35  ~/reports.py
+|4,39,15,35,1621668748,"~/reports.py"
+-'  15  35  ~/reports.py
+|4,39,15,35,1621668748,"~/reports.py"
+-'  15  35  ~/reports.py
+|4,39,15,35,1621668748,"~/reports.py"
+-'  15  35  ~/reports.py
+|4,39,15,35,1621668748,"~/reports.py"
+-'  15  35  ~/reports.py
+|4,39,15,35,1621668748,"~/reports.py"
 
 # History of marks within files (newest to oldest):
+
+> ~/emails.py
+	*	1621669468	0
+	"	29	17
+	^	29	18
+	.	29	17
+	+	3	38
+	+	2	0
+	+	3	0
+	+	22	31
+	+	11	52
+	+	30	0
+	+	12	111
+	+	23	29
+	+	6	13
+	+	30	4
+	+	13	42
+	+	18	0
+	+	17	19
+	+	32	9
+	+	23	14
+	+	15	16
+	+	16	52
+	+	29	17
+
+> ~/reports.py
+	*	1621668765	0
+	"	15	46
+	^	15	47
+	.	15	46
+	+	9	44
+	+	5	61
+	+	6	51
+	+	12	46
+	+	7	0
+	+	3	33
+	+	12	65
+	+	3	23
+	+	12	48
+	+	12	49
+	+	8	19
+	+	9	3
+	+	10	3
+	+	12	3
+	+	14	30
+	+	12	111
+	+	12	114
+	+	8	118
+	+	3	8
+	+	8	137
+	+	11	0
+	+	14	0
+	+	13	62
+	+	13	61
+	+	13	84
+	+	13	61
+	+	13	67
+	+	13	138
+	+	14	41
+	+	8	20
+	+	15	58
+	+	13	82
+	+	15	42
+	+	15	45
+	+	15	63
+	+	16	9
+	+	15	42
+	+	15	59
+	+	16	0
+	+	14	43
+	+	13	74
+	+	13	62
+	+	13	64
+	+	13	141
+	+	14	45
+	+	5	39
+	+	13	34
+	+	14	0
+	+	15	4
+	+	14	0
+	+	13	106
+	+	8	136
+	+	8	47
+	+	12	33
+	+	13	95
+	+	13	54
+	+	15	30
+	+	9	40
+	+	3	9
+	+	4	0
+	+	9	0
+	+	15	42
+	+	9	0
+	+	15	42
+	+	16	0
+	+	15	46
+
+> ~/report_email.py
+	*	1621668709	0
+	"	9	36
+	^	9	37
+	.	8	68
+	+	5	14
+	+	20	28
+	+	5	97
+	+	7	11
+	+	10	0
+	+	4	14
+	+	10	19
+	+	10	4
+	+	9	36
+	+	20	56
+	+	5	160
+	+	10	35
+	+	10	82
+	+	12	0
+	+	11	17
+	+	5	48
+	+	6	0
+	+	19	0
+	+	23	9
+	+	8	68
 
 > ~/run.py
 	*	1621665675	0
