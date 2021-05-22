@@ -5,7 +5,7 @@ import mimetypes
 import smtplib
 import os.path
 
-def main():
+def generate_message():
     sender = "automation@example.com"
     recipient = "student-02-b2e927b7fb52@example.com"
     subject = "Upload Completed - Online Fruit Store"
@@ -14,7 +14,6 @@ def main():
     attachment_filename = os.path.basename(attachment_path)
     mime_type, _ = mimetypes.guess_type(attachment_path)
     mime_type, mime_subtype = mime_type.split('/', 1)
-    print(mime_type)
     message = EmailMessage()
 
     message['From'] = sender
@@ -26,7 +25,15 @@ def main():
                                 maintype=mime_type,
                                 subtype=mime_subtype,
                                 filename=attachment_filename)
+    return message
+
+def send_message(message):
     print(message)
     
+
+def main():
+    message = generate_message()
+    send_message(message)
+
 if __name__ == "__main__":
     main()

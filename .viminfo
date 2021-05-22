@@ -24,18 +24,24 @@
 
 # Registers:
 ""1	LINE	0
-	    root = "/home/student-02-b2e927b7fb52/supplier-data/descriptions"
-|3,1,1,1,1,0,1621668660,"    root = \"/home/student-02-b2e927b7fb52/supplier-data/descriptions\""
+	    print(mime_type)
+|3,1,1,1,1,0,1621669642,"    print(mime_type)"
 "2	LINE	0
-	generate_report()
-|3,0,2,1,1,0,1621668651,"generate_report()"
+	    print(message)
+|3,0,2,1,1,0,1621669599,"    print(message)"
 "3	LINE	0
-	    paragraph = ""
-|3,0,3,1,1,0,1621668643,"    paragraph = \"\""
+	    root = "/home/student-02-b2e927b7fb52/supplier-data/descriptions"
+|3,0,3,1,1,0,1621668660,"    root = \"/home/student-02-b2e927b7fb52/supplier-data/descriptions\""
 "4	LINE	0
+	generate_report()
+|3,0,4,1,1,0,1621668651,"generate_report()"
+"5	LINE	0
+	    paragraph = ""
+|3,0,5,1,1,0,1621668643,"    paragraph = \"\""
+"6	LINE	0
 	import datetime
-|3,0,4,1,1,0,1621668628,"import datetime"
-"5	CHAR	0
+|3,0,6,1,1,0,1621668628,"import datetime"
+"7	CHAR	0
 	
 	    for f in os.listdir(root):
 	        if f.endswith(".txt"):
@@ -44,15 +50,15 @@
 	                name = lines[0]
 	                weight = lines[1]
 	                paragraph += name + "<br/>" + weight + "<br/
-|3,0,5,0,8,0,1621668568,"","    for f in os.listdir(root):","        if f.endswith(\".txt\"):","            with open(os.path.join(root,f), \"r\") as item:","                lines = item.readlines()","                name = lines[0]","                weight = lines[1]","                paragraph += name + \"<br/>\" + weight + \"<br/"
-"6	CHAR	0
+|3,0,7,0,8,0,1621668568,"","    for f in os.listdir(root):","        if f.endswith(\".txt\"):","            with open(os.path.join(root,f), \"r\") as item:","                lines = item.readlines()","                name = lines[0]","                weight = lines[1]","                paragraph += name + \"<br/>\" + weight + \"<br/"
+"8	CHAR	0
 	
 	def generate_report(attachment, title, paragraph):
 	    root = "/home/student-02-b2e927b7fb52/supplier-data/descriptions"
 	    paragraph = ""
 	    report = SimpleDocTemplate("/t
-|3,0,6,0,5,0,1621668492,"","def generate_report(attachment, title, paragraph):","    root = \"/home/student-02-b2e927b7fb52/supplier-data/descriptions\"","    paragraph = \"\"","    report = SimpleDocTemplate(\"/t"
-"7	CHAR	0
+|3,0,8,0,5,0,1621668492,"","def generate_report(attachment, title, paragraph):","    root = \"/home/student-02-b2e927b7fb52/supplier-data/descriptions\"","    paragraph = \"\"","    report = SimpleDocTemplate(\"/t"
+"9	CHAR	0
 	
 	    for f in os.listdir(root):
 	        if f.endswith(".txt"):
@@ -63,49 +69,101 @@
 	                paragraph += name + "<br/>" + weight + "<br/>" + "<br/>"
 	
 	
-|3,0,7,0,10,0,1621668455,"","    for f in os.listdir(root):","        if f.endswith(\".txt\"):","            with open(os.path.join(root,f), \"r\") as item:","                lines = item.readlines()","                name = lines[0]","                weight = lines[1]","                paragraph += name + \"<br/>\" + weight + \"<br/>\" + \"<br/>\"","",""
-"8	LINE	0
-	    report_title = Paragraph("Processed Update on " + datetime.datetime.now().strftime("%B %d, %Y"), styles["h1"])
-|3,0,8,1,1,0,1621668332,"    report_title = Paragraph(\"Processed Update on \" + datetime.datetime.now().strftime(\"%B %d, %Y\"), styles[\"h1\"])"
-"9	LINE	0
-	import datetime
-|3,0,9,1,1,0,1621668297,"import datetime"
+|3,0,9,0,10,0,1621668455,"","    for f in os.listdir(root):","        if f.endswith(\".txt\"):","            with open(os.path.join(root,f), \"r\") as item:","                lines = item.readlines()","                name = lines[0]","                weight = lines[1]","                paragraph += name + \"<br/>\" + weight + \"<br/>\" + \"<br/>\"","",""
 
 # File marks:
-'0  29  17  ~/emails.py
-|4,48,29,17,1621669468,"~/emails.py"
-'1  23  13  ~/emails.py
-|4,49,23,13,1621669337,"~/emails.py"
-'2  22  13  ~/emails.py
-|4,50,22,13,1621669337,"~/emails.py"
-'3  32  9  ~/emails.py
-|4,51,32,9,1621669325,"~/emails.py"
-'4  32  9  ~/emails.py
-|4,52,32,9,1621669325,"~/emails.py"
-'5  25  9  ~/emails.py
-|4,53,25,9,1621669325,"~/emails.py"
-'6  25  9  ~/emails.py
-|4,54,25,9,1621669325,"~/emails.py"
-'7  17  19  ~/emails.py
-|4,55,17,19,1621669295,"~/emails.py"
-'8  17  19  ~/emails.py
-|4,56,17,19,1621669295,"~/emails.py"
-'9  17  19  ~/emails.py
-|4,57,17,19,1621669295,"~/emails.py"
+'0  16  52  ~/emails.py
+|4,48,16,52,1621669644,"~/emails.py"
+'1  28  17  ~/emails.py
+|4,49,28,17,1621669629,"~/emails.py"
+'2  29  17  ~/emails.py
+|4,50,29,17,1621669629,"~/emails.py"
+'3  33  0  ~/emails.py
+|4,51,33,0,1621669613,"~/emails.py"
+'4  32  0  ~/emails.py
+|4,52,32,0,1621669613,"~/emails.py"
+'5  34  0  ~/emails.py
+|4,53,34,0,1621669613,"~/emails.py"
+'6  33  0  ~/emails.py
+|4,54,33,0,1621669613,"~/emails.py"
+'7  29  17  ~/emails.py
+|4,55,29,17,1621669468,"~/emails.py"
+'8  29  17  ~/emails.py
+|4,56,29,17,1621669468,"~/emails.py"
+'9  28  17  ~/emails.py
+|4,57,28,17,1621669468,"~/emails.py"
 
 # Jumplist (newest first):
+-'  16  52  ~/emails.py
+|4,39,16,52,1621669644,"~/emails.py"
+-'  28  17  ~/emails.py
+|4,39,28,17,1621669635,"~/emails.py"
+-'  29  17  ~/emails.py
+|4,39,29,17,1621669629,"~/emails.py"
+-'  33  0  ~/emails.py
+|4,39,33,0,1621669620,"~/emails.py"
+-'  34  0  ~/emails.py
+|4,39,34,0,1621669620,"~/emails.py"
+-'  32  0  ~/emails.py
+|4,39,32,0,1621669613,"~/emails.py"
+-'  33  0  ~/emails.py
+|4,39,33,0,1621669613,"~/emails.py"
+-'  29  17  ~/emails.py
+|4,39,29,17,1621669549,"~/emails.py"
+-'  30  17  ~/emails.py
+|4,39,30,17,1621669549,"~/emails.py"
+-'  29  17  ~/emails.py
+|4,39,29,17,1621669549,"~/emails.py"
 -'  29  17  ~/emails.py
 |4,39,29,17,1621669468,"~/emails.py"
+-'  22  13  ~/emails.py
+|4,39,22,13,1621669348,"~/emails.py"
 -'  23  13  ~/emails.py
 |4,39,23,13,1621669348,"~/emails.py"
+-'  23  13  ~/emails.py
+|4,39,23,13,1621669348,"~/emails.py"
+-'  23  13  ~/emails.py
+|4,39,23,13,1621669348,"~/emails.py"
+-'  21  13  ~/emails.py
+|4,39,21,13,1621669337,"~/emails.py"
 -'  22  13  ~/emails.py
 |4,39,22,13,1621669337,"~/emails.py"
+-'  22  13  ~/emails.py
+|4,39,22,13,1621669337,"~/emails.py"
+-'  22  13  ~/emails.py
+|4,39,22,13,1621669337,"~/emails.py"
+-'  39  9  ~/emails.py
+|4,39,39,9,1621669333,"~/emails.py"
+-'  24  9  ~/emails.py
+|4,39,24,9,1621669333,"~/emails.py"
+-'  38  9  ~/emails.py
+|4,39,38,9,1621669333,"~/emails.py"
+-'  31  9  ~/emails.py
+|4,39,31,9,1621669333,"~/emails.py"
+-'  40  9  ~/emails.py
+|4,39,40,9,1621669333,"~/emails.py"
+-'  25  9  ~/emails.py
+|4,39,25,9,1621669333,"~/emails.py"
+-'  33  9  ~/emails.py
+|4,39,33,9,1621669333,"~/emails.py"
+-'  39  9  ~/emails.py
+|4,39,39,9,1621669333,"~/emails.py"
+-'  25  9  ~/emails.py
+|4,39,25,9,1621669333,"~/emails.py"
 -'  32  9  ~/emails.py
 |4,39,32,9,1621669333,"~/emails.py"
 -'  25  9  ~/emails.py
 |4,39,25,9,1621669333,"~/emails.py"
 -'  25  9  ~/emails.py
 |4,39,25,9,1621669325,"~/emails.py"
+-'  17  19  ~/emails.py
+|4,39,17,19,1621669298,"~/emails.py"
+-'  16  19  ~/emails.py
+|4,39,16,19,1621669298,"~/emails.py"
+-'  17  19  ~/emails.py
+|4,39,17,19,1621669298,"~/emails.py"
+-'  16  19  ~/emails.py
+|4,39,16,19,1621669298,"~/emails.py"
 -'  17  19  ~/emails.py
 |4,39,17,19,1621669298,"~/emails.py"
 -'  16  19  ~/emails.py
@@ -130,6 +188,12 @@
 |4,39,7,0,1621669172,"~/emails.py"
 -'  7  0  ~/emails.py
 |4,39,7,0,1621669172,"~/emails.py"
+-'  7  0  ~/emails.py
+|4,39,7,0,1621669172,"~/emails.py"
+-'  7  0  ~/emails.py
+|4,39,7,0,1621669172,"~/emails.py"
+-'  7  0  ~/emails.py
+|4,39,7,0,1621669172,"~/emails.py"
 -'  1  0  ~/emails.py
 |4,39,1,0,1621668804,"~/emails.py"
 -'  1  0  ~/emails.py
@@ -142,6 +206,12 @@
 |4,39,1,0,1621668804,"~/emails.py"
 -'  1  0  ~/emails.py
 |4,39,1,0,1621668804,"~/emails.py"
+-'  1  0  ~/emails.py
+|4,39,1,0,1621668804,"~/emails.py"
+-'  1  0  ~/emails.py
+|4,39,1,0,1621668804,"~/emails.py"
+-'  1  0  ~/emails.py
+|4,39,1,0,1621668804,"~/emails.py"
 -'  15  46  ~/reports.py
 |4,39,15,46,1621668765,"~/reports.py"
 -'  15  46  ~/reports.py
@@ -224,102 +294,39 @@
 |4,39,15,46,1621668765,"~/reports.py"
 -'  15  46  ~/reports.py
 |4,39,15,46,1621668765,"~/reports.py"
--'  15  46  ~/reports.py
-|4,39,15,46,1621668765,"~/reports.py"
--'  15  46  ~/reports.py
-|4,39,15,46,1621668765,"~/reports.py"
--'  15  46  ~/reports.py
-|4,39,15,46,1621668765,"~/reports.py"
--'  15  46  ~/reports.py
-|4,39,15,46,1621668765,"~/reports.py"
--'  15  46  ~/reports.py
-|4,39,15,46,1621668765,"~/reports.py"
--'  15  46  ~/reports.py
-|4,39,15,46,1621668765,"~/reports.py"
--'  15  46  ~/reports.py
-|4,39,15,46,1621668765,"~/reports.py"
--'  15  46  ~/reports.py
-|4,39,15,46,1621668765,"~/reports.py"
--'  15  46  ~/reports.py
-|4,39,15,46,1621668765,"~/reports.py"
--'  15  46  ~/reports.py
-|4,39,15,46,1621668765,"~/reports.py"
--'  15  46  ~/reports.py
-|4,39,15,46,1621668765,"~/reports.py"
--'  15  46  ~/reports.py
-|4,39,15,46,1621668765,"~/reports.py"
--'  15  46  ~/reports.py
-|4,39,15,46,1621668765,"~/reports.py"
--'  15  46  ~/reports.py
-|4,39,15,46,1621668765,"~/reports.py"
--'  15  46  ~/reports.py
-|4,39,15,46,1621668765,"~/reports.py"
--'  15  46  ~/reports.py
-|4,39,15,46,1621668765,"~/reports.py"
--'  15  46  ~/reports.py
-|4,39,15,46,1621668765,"~/reports.py"
--'  15  46  ~/reports.py
-|4,39,15,46,1621668765,"~/reports.py"
--'  15  46  ~/reports.py
-|4,39,15,46,1621668765,"~/reports.py"
--'  15  46  ~/reports.py
-|4,39,15,46,1621668765,"~/reports.py"
--'  15  46  ~/reports.py
-|4,39,15,46,1621668765,"~/reports.py"
--'  15  46  ~/reports.py
-|4,39,15,46,1621668765,"~/reports.py"
--'  15  46  ~/reports.py
-|4,39,15,46,1621668765,"~/reports.py"
--'  15  35  ~/reports.py
-|4,39,15,35,1621668748,"~/reports.py"
--'  15  35  ~/reports.py
-|4,39,15,35,1621668748,"~/reports.py"
--'  15  35  ~/reports.py
-|4,39,15,35,1621668748,"~/reports.py"
--'  15  35  ~/reports.py
-|4,39,15,35,1621668748,"~/reports.py"
--'  15  35  ~/reports.py
-|4,39,15,35,1621668748,"~/reports.py"
--'  15  35  ~/reports.py
-|4,39,15,35,1621668748,"~/reports.py"
--'  15  35  ~/reports.py
-|4,39,15,35,1621668748,"~/reports.py"
--'  15  35  ~/reports.py
-|4,39,15,35,1621668748,"~/reports.py"
--'  15  35  ~/reports.py
-|4,39,15,35,1621668748,"~/reports.py"
--'  15  35  ~/reports.py
-|4,39,15,35,1621668748,"~/reports.py"
--'  15  35  ~/reports.py
-|4,39,15,35,1621668748,"~/reports.py"
--'  15  35  ~/reports.py
-|4,39,15,35,1621668748,"~/reports.py"
 
 # History of marks within files (newest to oldest):
 
 > ~/emails.py
-	*	1621669468	0
-	"	29	17
-	^	29	18
-	.	29	17
+	*	1621669643	0
+	"	16	52
+	^	16	53
+	.	17	0
 	+	3	38
 	+	2	0
 	+	3	0
-	+	22	31
+	+	21	31
 	+	11	52
-	+	30	0
+	+	32	0
 	+	12	111
-	+	23	29
+	+	22	29
 	+	6	13
-	+	30	4
+	+	32	4
 	+	13	42
-	+	18	0
-	+	17	19
-	+	32	9
-	+	23	14
+	+	17	0
+	+	16	72
+	+	39	9
+	+	22	14
 	+	15	16
 	+	16	52
 	+	29	17
+	+	16	53
+	+	8	19
+	+	37	0
+	+	30	26
+	+	31	17
+	+	28	17
+	+	17	0
 
 > ~/reports.py
 	*	1621668765	0
